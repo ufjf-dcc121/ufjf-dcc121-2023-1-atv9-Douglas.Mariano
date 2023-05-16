@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semana 09 Forms</title>
+    <h1>Semana 09: Forms</h1>
 </head>
 <body>
     <main>
+
+        
+
         <form action="">
             <input type="text" name="nome" />
             <input type="text" name="sobrenome" />
             <input type="number" name="idade" />
             <input type="submit" />
-            <input type="rese" />
+            <input type="reset" />
         </form>
-        <p>Olá<span></span>!</p>
+        <p></p>
+        <h2>Visitas passadas:</h2>
+        <ol></ol>
+        <span></span>
     </main>
+
+   
+
     <script>
         const form = document.querySelector("form");
         form.addEventListener("submit", aoenviar);
@@ -24,12 +34,13 @@
 
         function aoenviar(evento){
             evento.preventDefault();
-            const nome = form.name.value;
+            const nome = form.nome.value;
             const sobrenome = form.sobrenome.value;
-            const idade = form.idade.valueAsnumber;
-            const nomecompleto = ${nome} ${sobrenome}, ${idade} anos;
-
+            const idade = form.idade.valueAsNumber;
+            const nomecompleto = `${nome} ${sobrenome}, ${idade} anos`;
+            spannome.innerHTML = `${nomecompleto}`;
         }
+
     </script>
 </body>
 </html>
