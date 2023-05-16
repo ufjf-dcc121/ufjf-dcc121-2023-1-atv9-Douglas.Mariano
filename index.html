@@ -39,6 +39,8 @@
             const idade = form.idade.valueAsNumber;
             const nomecompleto = `${nome} ${sobrenome}, ${idade} anos`;
             spannome.innerHTML = `${nomecompleto}`;
+            form.reset();
+            form.focus();
         }
 
     </script>
