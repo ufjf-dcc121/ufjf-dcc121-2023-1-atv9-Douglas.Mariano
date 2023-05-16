@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Semana 09 Forms</title>
 </head>
 <body>
-    
+    <main>
+        <form action="">
+            <input type="text" name="nome" />
+            <input type="text" name="sobrenome" />
+            <input type="number" name="idade" />
+            <input type="submit" />
+            <input type="rese" />
+        </form>
+        <p>Olá<span></span>!</p>
+    </main>
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", aoenviar);
+        const spannome = document.querySelector("span");
+
+        function aoenviar(evento){
+            evento.preventDefault();
+            const nome = form.name.value;
+            const sobrenome = form.sobrenome.value;
+            const idade = form.idade.valueAsnumber;
+            const nomecompleto = ${nome} ${sobrenome}, ${idade} anos;
+
+        }
+    </script>
 </body>
 </html>
