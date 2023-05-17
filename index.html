@@ -35,6 +35,7 @@
         const form = document.querySelector("form");
         form.addEventListener("submit", aoenviar);
         const spannome = document.querySelector("span");
+        const ol = document.querySelector("ol");
 
         function aoenviar(evento){
             evento.preventDefault();
@@ -45,6 +46,31 @@
             spannome.innerHTML = `${nomecompleto}`;
             form.reset();
             form.focus();
+            lista(nome, sobrenome, idade);
+        }
+
+        function lista(nome, sobrenome, idade){
+            const li = document.createElement('li');
+            const divPessoa = document.createElement('div');
+            divPessoa.classList.add("pessoa");
+
+            const spanNome = document.createElement('div');
+            spanNome.classList.add('nome');
+            spanNome.textContent = nome;
+            divPessoa.appendChild(spanNome);
+
+            const spanSobrenome = document.createElement('div');
+            spanSobrenome.classList.add('sobrenome');
+            spanSobrenome.textContent = sobrenome;
+            divPessoa.appendChild(spanSobrenome);
+
+            const spanIdade = document.createElement('div');
+            spanIdade.classList.add('idade');
+            spanIdade.textContent = idade;
+            divPessoa.appendChild(spanIdade);
+
+            li.appendChild(divPessoa);
+            ol.appendChild(li);
         }
 
     </script>
